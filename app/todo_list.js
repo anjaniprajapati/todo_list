@@ -37,6 +37,8 @@ const TaskManager = () => {
     setTask(updatedTasks);
   };
 
+  const sortedTasks = [...task].sort((a, b) => a.priority - b.priority);
+
   return (
     <div>
       <div className="MainDiv">
@@ -48,22 +50,23 @@ const TaskManager = () => {
           onChange={(e) => setTaskName(e.target.value)}
         />
         <select
-            className="Priority"
-            value={taskPriority}
-            onChange={(e) => setTaskPriority(e.target.value)}>
-            <option value="1">Priority</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
+          className="Priority"
+          value={taskPriority}
+          onChange={(e) => setTaskPriority(e.target.value)}
+        >
+          <option value="">Priority</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
         </select>
         <input
           className="Estimated_Time"
@@ -83,12 +86,12 @@ const TaskManager = () => {
               <th>Name</th>
               <th>Priority</th>
               <th>Estimated Time</th>
-              <th>Done / NotDone</th>
+              <th>Done / Not Done</th>
               <th>Delete</th>
             </tr>
           </thead>
           <tbody>
-            {task.map((task, index) => (
+            {sortedTasks.map((task, index) => (
               <tr key={index}>
                 <td>
                   <span style={{ textDecoration: task.isDone ? 'line-through' : 'none' }}>
@@ -96,14 +99,14 @@ const TaskManager = () => {
                   </span>
                 </td>
                 <td>
-                    <span style={{ textDecoration: task.isDone ? 'line-through' : 'none' }}>
-                        {task.priority}
-                    </span>
+                  <span style={{ textDecoration: task.isDone ? 'line-through' : 'none' }}>
+                    {task.priority}
+                  </span>
                 </td>
                 <td>
-                    <span style={{ textDecoration: task.isDone ? 'line-through' : 'none' }} >
-                        {task.estimatedTime}
-                    </span>
+                  <span style={{ textDecoration: task.isDone ? 'line-through' : 'none' }}>
+                    {task.estimatedTime}
+                  </span>
                 </td>
                 <td>
                   <button onClick={() => toggleDone(index)}>
@@ -123,6 +126,8 @@ const TaskManager = () => {
 };
 
 export default TaskManager;
+
+
 
 
 
