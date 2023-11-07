@@ -127,7 +127,55 @@ const TaskManager = () => {
 
 export default TaskManager;
 
+<<<<<<< Updated upstream
 
+=======
+    return(
+        <div>
+            <div className='MainDiv'>
+                <input 
+                    type="text" 
+                    placeholder="Task Name" 
+                    value={taskName} 
+                    onChange={(e) => setTaskName(e.target.value)} >
+                </input><br></br>
+                <select  value={taskPriority} onChange={(e) => setTaskPriority(e.target.value)} >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select><br></br>
+                <input 
+                    type ="text" 
+                    placeholder="Estimated Time"
+                    value={estimatedTime}
+                    onChange={(e) => setEstimatedTime(e.target.value)}>
+                </input><br></br>
+                <button onClick={addTask}>Add</button>
+            </div>
+            <ul>
+                {task.map((task, index) => (
+                <li key={index}>
+                    <span>Name: {task.name}</span><br></br>
+                    <span>Priority: {task.priority}</span><br></br>
+                    <span>Time: {task.estimatedTime}</span><br></br>
+                    <button onClick={() => deleteTask(index)}>Delete</button>
+                </li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+ export default TaskManager;
+>>>>>>> Stashed changes
 
 
 
