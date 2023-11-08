@@ -1,6 +1,6 @@
 "use client"
-import React, { useState } from 'react';
 
+import React, { useState } from 'react';
 const TaskManager = () => {
   const [task, setTask] = useState([]);
   const [taskName, setTaskName] = useState('');
@@ -109,12 +109,12 @@ const TaskManager = () => {
                   </span>
                 </td>
                 <td>
-                  <button onClick={() => toggleDone(index)}>
+                  <button  className="DoneNotDone" onClick={() => toggleDone(index)}>
                     {task.isDone ? 'Not Done' : 'Done'}
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => deleteTask(index)}>Delete</button>
+                  <button className="DoneNotDone" onClick={() => deleteTask(index)}>Delete</button>
                 </td>
               </tr>
             ))}
@@ -128,6 +128,127 @@ const TaskManager = () => {
 export default TaskManager;
 
 
+
+// import React, { useState } from 'react';
+
+// const Functionality = () => {
+//   const [userInput, setUserInput] = useState('');
+//   const [priority, setPriority] = useState('low');
+//   const [done, setDone] = useState(false); // Change the initial value to a boolean
+//   const [completionTime, setCompletionTime] = useState('');
+//   const [list, setList] = useState([]);
+
+//   const updateInput = (value) => {
+//     setUserInput(value);
+//   };
+
+//   const updatePriority = (value) => {
+//     setPriority(value);
+//   };
+
+//   const updateCompletionTime = (value) => {
+//     setCompletionTime(value);
+//   };
+
+//   const addItem = () => {
+//     if (userInput !== '') {
+//       const userInputItem = {
+//         id: Math.random(),
+//         value: userInput,
+//         priority: priority,
+//         completionTime: completionTime,
+//         done: done, // Change the property name to 'done'
+//       };
+
+//       setList([...list, userInputItem]);
+//       setUserInput('');
+//       setPriority('low');
+//       setCompletionTime('');
+//       setDone(false); // Set 'done' to false after adding an item
+//     }
+//   };
+
+//   const deleteItem = (itemId) => {
+//     const updatedList = list.filter((item) => item.id !== itemId);
+//     setList(updatedList);
+//   };
+
+//   const toggleDone = (itemId) => {
+//     const updatedList = list.map((listItem) => {
+//       if (listItem.id === itemId) {
+//         return { ...listItem, done: !listItem.done }; // Change 'isDone' to 'done'
+//       }
+//       return listItem;
+//     });
+
+//     setList(updatedList);
+//   };
+
+//   const shortpro = [...list].sort((a, b) => a.priority - b.priority);
+
+//   return (
+//     <div className='first'>
+//       <div className='text'>TODO_LIST</div>
+//       <div className='name-text'>Shanti Singh</div>
+//       <div className='input-text'>
+//         <input
+//           className='input'
+//           placeholder="Add item..."
+//           value={userInput}
+//           onChange={(e) => updateInput(e.target.value)}
+//         />
+//         <select
+//           className='select'
+//           value={priority}
+//           onChange={(e) => updatePriority(e.target.value)}
+//         >
+//           <option value="1">1</option>
+//           <option value="2">2</option>
+//           <option value="3">3</option>
+//           <option value="4">4</option>
+//           <option value="5">5</option>
+//           <option value="6">6</option>
+//           <option value="7">7</option>
+//         </select>
+//         <input
+//           className='time'
+//           placeholder="Completion Time"
+//           value={completionTime}
+//           onChange={(e) => updateCompletionTime(e.target.value)}
+//         />
+//         <button className='button' onClick={addItem}>
+//           ADD
+//         </button>
+//       </div>
+//       <div className='secondDiv'>
+//         {list.length > 0 ? (
+//           shortpro.map((item) => (
+//             <div key={item.id} className='innerDiv'>
+//               <span className="item-text" style={{ textDecoration: item.done ? 'line-through' : 'none' }}>{item.value}</span>
+//               <span className="item-text" style={{ textDecoration: item.done ? 'line-through' : 'none' }}>Priority: {item.priority}</span>
+//               <span className="item-text" style={{ textDecoration: item.done ? 'line-through' : 'none' }}>Completion Time: {item.completionTime}</span>
+//               <span className="item-text" style={{ textDecoration: item.done ? 'line-through' : 'none' }}>Done: {item.done ? 'Yes' : 'No'}</span>
+//               <span>
+//                 <button className='innerButton' onClick={() => deleteItem(item.id)}>
+//                   Delete
+//                 </button>
+//               </span>
+//               <span>
+//                 <button className='innerButton' onClick={() => toggleDone(item.id)}>
+//                   {item.done ? 'Not Done' : 'Done'}
+//                 </button>
+//               </span>
+//             </div>
+//           ))
+//         ) : (
+//           <div className='lastDiv'>No items in the list</div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Functionality;
 
 
 

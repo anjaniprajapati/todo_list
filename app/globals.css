@@ -1,6 +1,10 @@
  body{
   margin: 0;
-  background-color:rgb(38, 35, 35)  ;
+  background-color:#2f4f4f 	;
+}
+h1{
+  color:white;
+  padding: 5px 0px 30px;
 }
 .MainDiv{
     background-color: #12343b;
@@ -29,6 +33,7 @@
   text-align: center;
   left:30px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .Estimated_Time{
   width: 150px;
@@ -50,6 +55,7 @@
   font-size: 20px;
   font-weight: 600;
   border-radius: 10px;
+  cursor: pointer;
 }
 .Headerline{
   border: 2px solid wheat;
@@ -71,4 +77,159 @@ th,td{
   background-color: #12343b;
   box-shadow: 0px 10px 30px  #000;
 }
+.DoneNotDone{
+  cursor: pointer;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: antiquewhite;
+  background-color: #12343b;
+  border: none;
+}
 
+
+
+
+
+
+
+
+ /* body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  text-align: center;
+  border: 5px solid green;
+  padding: 20px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+#myInput,
+#Priority,
+#timing {
+  margin-top: 10px; 
+  width: 300px;
+  height: 30px;
+}
+
+#pro,
+#time {
+  margin: 10px 0;
+}
+
+.first {
+  margin: 0 auto; 
+  padding: 20px;
+  font-family: Arial,sans-serif;
+  max-width: 600px;
+
+}
+.text{
+    text-align:center;
+    color:green;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.name-text{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size:1.5rem ;
+  font-weight: bold;
+}
+
+.input-text{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.input{
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-right: 10px;
+  flex-grow: 1;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+
+
+
+}
+
+.select{
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+
+}
+
+.time{
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-right: 10px;
+  flex-grow: 1;
+  border-radius: 4px;
+  border: 1 solid #ccc;
+
+}
+
+.button{
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.secondDiv{
+  background: color #f9f9f9; 
+  padding: 20px;
+  border-radius: 8px;
+
+}
+.innerDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+
+}
+
+.innerButton{
+    padding:10px;
+    background-color:#f44336 ;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+.lastDiv{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+    
+}
+
+.box2{
+	border:red solid 1px;
+	margin: 0 auto; 
+	padding: 15px;
+	font-family: Arial,sans-serif;
+	max-width: 400px;
+ } */
